@@ -1,0 +1,24 @@
+[Unit]
+Description=BAK01
+After=network.target
+StartLimitIntervalSec=0
+ 
+[Service]
+ExecStart=/usr/bin/python3.7 /home/pi/bak1/btn1.py
+WorkingDirectory=/home/pi/bak1/
+Type=simple
+Restart=always
+RestartSec=1
+User=pi
+ 
+[Install]
+WantedBy=multi-user.target
+
+#sudo ln -s /home/pi/bak1/bak01.service /etc/systemd/system/bak01.service
+#sudo systemctl enable bak01.service
+#sudo systemctl start bak01.service
+
+
+
+
+
